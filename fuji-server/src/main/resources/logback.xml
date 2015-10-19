@@ -21,7 +21,7 @@
         </triggeringPolicy>
     </appender>
 
-    <logger name="com.onmysky.fuji.server.blog" level="INFO" additivity="false">
+    <logger name="com.onmysky.fuji.server.user" level="INFO" additivity="false">
         <appender-ref ref="STDOUT"/>
         <appender-ref ref="FILE"/>
     </logger>
