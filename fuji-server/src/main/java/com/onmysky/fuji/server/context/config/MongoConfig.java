@@ -18,7 +18,7 @@ import java.util.List;
  */
 @Configuration
 public class MongoConfig {
-  @Value("#{'${mongo.rs1.url}'.split(',')}")
+  @Value("${mongo.rs1.url}")
   private List<String> mongors1Urls;
 
   @Value("${mongo.rs2.url}")
