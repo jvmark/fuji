@@ -16,6 +16,8 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 @ComponentScan
 @EnableAutoConfiguration(exclude = {
+    MongoDataAutoConfiguration.class,
+    MongoRepositoriesAutoConfiguration.class,
     DataSourceAutoConfiguration.class,
     DataSourceTransactionManagerAutoConfiguration.class
     })
