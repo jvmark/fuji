@@ -30,7 +30,7 @@
     <pluginRepositories>
         <pluginRepository>
             <id>nexus</id>
-            <url>http://139.196.51.78:8081/nexus/content/repositories/central/</url>
+            <url>http://139.196.51.78:8081/nexus/content/groups/public</url>
             <releases>
                 <enabled>true</enabled>
             </releases>
