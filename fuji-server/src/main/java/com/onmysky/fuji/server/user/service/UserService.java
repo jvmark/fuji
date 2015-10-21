@@ -4,6 +4,7 @@ import com.onmysky.fuji.client.dto.UserDTO;
 import com.onmysky.fuji.client.service.IUserService;
 import com.onmysky.fuji.server.user.dao.UserDAO;
 import com.onmysky.fuji.server.user.domain.UserDO;
+import com.onmysky.nova.server.RpcService;
 import org.modelmapper.ModelMapper;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -16,6 +17,7 @@ import javax.annotation.Resource;
  */
 
 @Component
+@RpcService(value = UserService.class)
 public class UserService implements IUserService{
 
   @Resource

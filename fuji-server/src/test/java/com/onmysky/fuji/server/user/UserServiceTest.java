@@ -28,7 +28,7 @@ public class UserServiceTest extends BaseTest{
     } catch (Exception e) {
       e.printStackTrace();
     }
-    System.out.println(user);
+    System.out.println(user.getName());
   }
 
   @Test
