@@ -32,13 +32,13 @@ public class ServiceConfig {
     return rpcServer;
   }
 
-  @Bean
+  //@Bean
   public ServiceDiscovery serviceDiscovery() {
     ServiceDiscovery serviceDiscovery = new ServiceDiscovery(registerAddress);
     return serviceDiscovery;
   }
 
-  @Bean
+  //@Bean
   public RpcProxy rpcProxy() {
     ServiceDiscovery serviceDiscovery = serviceDiscovery();
     RpcProxy rpcProxy = new RpcProxy(serviceDiscovery);
