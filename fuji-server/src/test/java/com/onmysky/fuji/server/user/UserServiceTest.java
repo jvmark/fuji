@@ -5,7 +5,10 @@ import com.onmysky.fuji.client.service.IUserService;
 import com.onmysky.fuji.server.BaseTest;
 import com.onmysky.fuji.server.user.dao.UserDAO;
 import com.onmysky.fuji.server.user.domain.UserDO;
+import com.onmysky.fuji.server.user.service.UserService;
+import com.onmysky.nova.client.RpcProxy;
 import org.junit.Test;
+import org.springframework.beans.factory.annotation.Autowired;
 
 import javax.annotation.Resource;
 
@@ -19,6 +22,9 @@ public class UserServiceTest extends BaseTest{
 
   @Resource
   private UserDAO userDAO;
+
+  @Autowired
+  private RpcProxy rpcProxy;
 
   @Test
   public void testFindById() {
@@ -35,5 +41,12 @@ public class UserServiceTest extends BaseTest{
   public void testUserDAO() {
     UserDO userDO = userDAO.findById(1);
     System.out.println(userDO.getName());
+  }
+
+  @Test
+  public void test() {
+    UserService userService = rpcProxy.create(IUserService.class);
+    UserDTO user = userService.findOne(1);
+    System.out.println(user.getName());
   }
 }
