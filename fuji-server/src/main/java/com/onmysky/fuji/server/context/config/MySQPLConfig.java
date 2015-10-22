@@ -73,7 +73,6 @@ public class MySQPLConfig {
   public SqlSessionFactory sqlSessionWrite() throws Exception {
     final SqlSessionFactoryBean sessionFactory = new SqlSessionFactoryBean();
     sessionFactory.setDataSource(ds1Master());
-//        WARN. 太过简短的package是否有性能问题?
     sessionFactory.setTypeAliasesPackage("com.onmysky.fuji.server");
     PathMatchingResourcePatternResolver resolver = new PathMatchingResourcePatternResolver();
     Resource[] resources = resolver.getResources("classpath:com/onmysky/fuji/server/*/*.xml");
