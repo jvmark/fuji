@@ -42,7 +42,6 @@ public class ServiceConfig {
   public RpcProxy rpcProxy() {
     ServiceDiscovery serviceDiscovery = serviceDiscovery();
     RpcProxy rpcProxy = new RpcProxy(serviceDiscovery);
-    System.out.println("=================rpcProxy================");
     return rpcProxy;
   }
 }
